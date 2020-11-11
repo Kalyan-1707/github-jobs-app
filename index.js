@@ -42,7 +42,7 @@ const elapsedTimeCal = (createdAt) => {
 const fetchData = async () => {
     
     //https://cors-anywhere.herokuapp.com
-    apiData = await axios.get("https://jobs.github.com/positions.json",{
+    apiData = await axios.get("https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json",{
         params:{
             description:desc,
             location:loc,
