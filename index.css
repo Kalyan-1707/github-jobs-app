@@ -41,7 +41,7 @@ h1,h2,h3,h4,h5,h6 {
 nav{
    background-color: var(--nav_bar_color);
    border-bottom-left-radius: 3rem;
-   position: relative;
+   
    padding-left: 3em;
    padding-right: 3em;
    padding-bottom: 2em;
@@ -56,11 +56,11 @@ nav{
    justify-content: space-between;
 }
 
-nav span{
+nav div span{
     display: flex;
 }
 
-nav span i{
+nav div  span i{
     color: white;
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -74,17 +74,23 @@ nav h1{
 }
 
 header{
-    position:absolute;
-    top:75%;
-    left:10%;
-    display: flex;
+
     width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: -25px;
 }
 
-nav header form{
-    display: inline-flex;
-    width: 100%;
+@media only screen and (max-width: 600px){
+    header{
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+    }
 }
+
+
 
 
 header div{
@@ -222,13 +228,15 @@ main{
     width:80%;
     margin: 3em auto;
     padding: 0;
-   
 }
+
+
 
 .body-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     justify-content: center;
+
 }
 
 
@@ -339,4 +347,26 @@ main .card{
 
 .modal p,ul,li{
     font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px){
+    main{
+        width: 80%;
+        margin: auto;
+    }
+
+    main .card{
+        margin: 1em auto 0;
+    
+    }
+
+    .modal-job-details{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .modal .card-footer p{
+    margin-top: 0.5em;
+    }
+    
 }

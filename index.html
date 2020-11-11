@@ -27,27 +27,32 @@
             </span>
         </div>
 
-        <header>
+    </nav>
 
-           
-            <form onsubmit="onSubmitHandler(event)">
+    <div>
+        <form onsubmit="onSubmitHandler(event)">
+           <header>
+        
+            
                 <div class="search-input">
                     <i class="material-icons">search</i>
                     <input type="text" placeholder="Filter by title,companies,expertise" id="desc-bar">
                 </div>
+        
                 <div class="filter">
                     <i class="material-icons">location_on</i>
                     <input type="text" placeholder="Filter by location" id="loc-bar">
                 </div>
+        
                 <div class="search-btn">
                     <input type="checkbox" name="fulltime" id="full-time">
                     <label for="fulltime">Full Time Only</label>
                     <button type="submit" id="submit-btn">Search</button>
-                </div>
-            </form>
-
-        </header>
-    </nav>
+                </div>    
+            
+            </header>
+        </form>
+    </div>
 
 
     <main>
