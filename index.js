@@ -1,4 +1,4 @@
-let desc = "";
+let desc = "Javascript";
 let loc = "";
 let isFullTime=false;
 
@@ -37,12 +37,12 @@ const elapsedTimeCal = (createdAt) => {
 
 }
 
-elapsedTimeCal("Tue Oct 10 13:40:39 UTC 2020");
+
 
 const fetchData = async () => {
     
     //https://cors-anywhere.herokuapp.com
-    apiData = await axios.get("https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?search=node",{
+    apiData = await axios.get("https://jobs.github.com/positions.json",{
         params:{
             description:desc,
             location:loc,
@@ -168,6 +168,10 @@ const onSubmitHandler = (event) => {
     
     fetchData();
 }
+
+
+
+fetchData();
 
 theme.addEventListener('change', () => {
     document.body.classList.toggle('dark'); 
