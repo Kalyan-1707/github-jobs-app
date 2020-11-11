@@ -6,7 +6,7 @@ body{
 
     --nav_bar_color: #0047ab;
     --body_background_color:gainsboro;
-    --div_background_color:white;
+    --div_background_color:hsl(0, 0%, 97%);
     --buttons_color: #0047ab;
     --text_color:black;
     --light_text_color:rgb(100, 100, 100);
@@ -22,10 +22,10 @@ body{
 
 body.dark{
       --nav_bar_color: #0047ab;
-    --body_background_color: rgb(8, 8, 8);
-    --div_background_color: rgb(14, 13, 13);
+    --body_background_color:#121721;
+    --div_background_color: #19202D;
     --buttons_color: #0047ab;
-    --text_color:white;
+    --text_color:hsl(0, 0%, 100%);
 }
 
 
@@ -235,8 +235,7 @@ main{
 .body-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    justify-content: center;
-
+    justify-content: space-between;
 }
 
 
@@ -246,9 +245,10 @@ main .card{
     background-color: var(--div_background_color);
     width: 300px;
     margin-top: 1em;
-    margin-left: 1em;
     display: flex;
     flex-direction: column;
+    border-radius: 0.5em;
+    padding: 0.5em;
 
 }
 .card-footer,.card-header,.card-title{
@@ -316,7 +316,7 @@ main .card{
     overflow: auto;
 }
 
-.modal-job-details{
+.modal-job-details,.modal-header{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -349,6 +349,10 @@ main .card{
     font-size: 1rem;
 }
 
+.rotate{
+    transform: rotate(45deg);
+}
+
 @media only screen and (max-width: 600px){
     main{
         width: 80%;
@@ -369,4 +373,19 @@ main .card{
     margin-top: 0.5em;
     }
     
+}
+
+.danger{
+    background-color: hsl(0, 90%, 58%);
+    margin: 0;
+    padding: 0.2em 0.4em;
+    font-size: 1.5rem;
+}
+.danger:focus,.danger:hover{
+    background-color: hsl(0, 100%, 60%);
+    box-shadow:0 0 1em hsl(0, 100%, 38%);
+}
+
+.theme-active{
+    color:hsl(17,95%,60%);
 }

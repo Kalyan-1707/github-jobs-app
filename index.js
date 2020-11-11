@@ -9,8 +9,10 @@ const searchBtn = document.querySelector('#submit-btn');
 const theme = document.querySelector('#theme');
 const bodyDiv = document.querySelector('.body-container');
 const modal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".danger");
 let modalDisplay = false;
 let apiData;
+
 
 
 const elapsedTimeCal = (createdAt) => {
@@ -80,8 +82,8 @@ const createCard = (data) => {
                 
                     <div class="card-body">
                     <div class="card-title">
-                        <h1 class="job-role">${data.company}</h1>
-                        <p class="company">${data.title}</p>
+                        <h1 class="job-role">${data.title}</h1>
+                        <p class="company">${data.company}</p>
                     </div>
                 
                     <div class="card-footer">
@@ -117,9 +119,16 @@ const renderModal = (data) => {
             div.innerHTML = item.description;
             modalHeader.innerHTML = 
                                     ` 
+                                    <div class="card-header">
                                         <p>${elapsedTimeCal(item.created_at)} ago</p>
                                         <p class="separator">.</p>
-                                        <p>${item.type}</p>`;
+                                        <p>${item.type}</p>
+                                    </div> 
+                                    
+                                    <div>
+                                        <button class="btn danger" onclick="closeModal()">&times;</button>
+                                    </div>
+                                    ` ;
 
             modalJobDetails.innerHTML = 
                                             `<div class="card-title">
@@ -165,29 +174,31 @@ const onSubmitHandler = (event) => {
     fetchData();
 }
 
-
+const closeModal = () => {
+   
+    modal.style.display = "none";
+    modalDisplay = false;
+    document.querySelector("main").classList.toggle("opaque");
+    document.querySelector("nav").classList.toggle("opaque");
+    
+}
 
 fetchData();
 
 theme.addEventListener('change', () => {
     document.body.classList.toggle('dark'); 
+    document.querySelector(".sun").classList.toggle('theme-active');
+    document.querySelector(".moon").classList.toggle('theme-active');
 })
 
-document.addEventListener('click', (event) => {
 
-   
+document.addEventListener('click', (event) => {
+    
     if(!modal.contains(event.target))
     {
-        
         if(modalDisplay){ 
-       
-        modal.style.display = "none";
-        modalDisplay = false;
-        document.querySelector("main").classList.toggle("opaque");
-    document.querySelector("nav").classList.toggle("opaque");
-    
-       }
-   
+            closeModal();
+        }
     }
-   
+
 })
