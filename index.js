@@ -26,10 +26,7 @@ const elapsedTimeCal = (createdAt) => {
 
     diffHours = Math.abs(currDate.getHours() - jobDate.getHours());
 
-    console.log(diffDays,diffHours);
-
-    console.log(currDate,jobDate);
-
+    
     if(diffDays)
         return `${diffDays} d `;
     else
@@ -50,7 +47,7 @@ const fetchData = async () => {
         }
     });
 
-    console.log(apiData);
+    //console.log(apiData);
     apiData = apiData.data;
     renderCards(apiData);
 
@@ -98,7 +95,7 @@ const createCard = (data) => {
                 
                 </div>`;
 
-                console.log(data.description);
+              
                 
     return card;
 
@@ -106,7 +103,7 @@ const createCard = (data) => {
 
 const renderModal = (data) => {
 
-    console.log("modal invoked",data);
+  
     const div = document.querySelector(".modal-body");
     const modalHeader = document.querySelector(".modal-header");
     const modalJobDetails = document.querySelector(".modal-job-details");
@@ -139,7 +136,7 @@ const renderModal = (data) => {
                                     
             modalFooter.innerHTML = `<h1>How to Apply</h1>
                                     ${item.how_to_apply}`;
-            console.log(item);
+          
         }
     }
 
@@ -163,8 +160,7 @@ const onSubmitHandler = (event) => {
     loc = locationInputField.value;
     isFullTime = fullTimeInputField.checked?true:false;
     
-    console.log(fullTimeInputField);
-    console.log(desc,loc,isFullTime);
+  
     
     fetchData();
 }
@@ -179,14 +175,12 @@ theme.addEventListener('change', () => {
 
 document.addEventListener('click', (event) => {
 
-    console.log(modal.contains(event.target));
-    console.log(typeof modal.style.display);
-    console.log(modal.style.display);
+   
     if(!modal.contains(event.target))
     {
-        console.log(modalDisplay);
+        
         if(modalDisplay){ 
-        console.log("closing pop up");
+       
         modal.style.display = "none";
         modalDisplay = false;
         document.querySelector("main").classList.toggle("opaque");
