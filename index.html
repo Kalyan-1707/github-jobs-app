@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Github Jobs</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <nav>
+
+        <div class="container">
+            <span>
+                <h1 class="brand">devjobs</h1>
+            </span>
+            
+            <span>
+                <i class="material-icons">wb_sunny</i>
+                <label class="toggle-container">
+                    <input type="checkbox" id="theme" class="dark-mode">
+                    <div class="toggle-div"></div>
+                </label>
+                <i class="material-icons">nights_stay</i>
+            </span>
+        </div>
+
+        <header>
+
+           
+            <form onsubmit="onSubmitHandler(event)">
+                <div class="search-input">
+                    <i class="material-icons">search</i>
+                    <input type="text" placeholder="Filter by title,companies,expertise" id="desc-bar">
+                </div>
+                <div class="filter">
+                    <i class="material-icons">location_on</i>
+                    <input type="text" placeholder="Filter by location" id="loc-bar">
+                </div>
+                <div class="search-btn">
+                    <input type="checkbox" name="fulltime" id="full-time">
+                    <label for="fulltime">Full Time Only</label>
+                    <button type="submit" id="submit-btn">Search</button>
+                </div>
+            </form>
+
+        </header>
+    </nav>
+
+
+    <main>
+
+        <div class="body-container">
+            <div class="card">
+                <div class="card-header">
+                    <p>5h ago</p>
+                    <p>.</p>
+                    <p>Full time</p>
+                </div>
+
+                <div class="card-title">
+                    <h1 class="job-role">Associte Software Developer</h1>
+                    <p class="company">Legato</p>
+                </div>
+
+                <div class="card-footer">
+                    <p>Remote , Mumbai , Pune</p>
+                </div>
+
+            
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <p>5h ago</p>
+                    <p>.</p>
+                    <p>Full time</p>
+                </div>
+            
+                <div class="card-title">
+                    <h1 class="job-role">Associte Software Developer</h1>
+                    <p class="company">Legato</p>
+                </div>
+            
+                <div class="card-footer">
+                    <p>Remote , Mumbai , Pune</p>
+                </div>
+
+            
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <p>5h ago</p>
+                        <p>.</p>
+                        <p>Full time</p>
+                    </div>
+                
+                    <div class="card-title">
+                        <h1 class="job-role">Associte Software Developer</h1>
+                        <p class="company">Legato</p>
+                    </div>
+                
+                    <div class="card-footer">
+                        <p>Remote , Mumbai , Pune</p>
+                    </div>
+                
+                
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <p>5h ago</p>
+                        <p>|</p>
+                        <p>Full time</p>
+                    </div>
+                
+
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h1 class="job-role">Associte Software Developer</h1>
+                            <p class="company">Legato</p>
+                        </div>
+                    
+                        <div class="card-footer">
+                            <p>Remote , Mumbai , Pune</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="view-details">
+                        <button class="btn">View Details</button>
+                    </div>
+                
+                </div>
+
+
+        </div>
+
+
+    </main>
+
+    <section class="modal">
+
+        <div class="modal-title">
+            <div class="card-header modal-header">
+            <p>5h ago</p>
+            <p class="separator">|</p>
+            <p>Full time</p>
+            </div>
+
+            <div class="modal-job-details">
+                <div class="card-title">
+                    <h1 class="job-role">Associte Software Developer</h1>
+                    <p class="company">Legato</p>
+                </div>
+                <div>
+                <button class="apply btn">Apply Now</button>
+                </div>
+            </div>
+
+            <div class="card-footer modal-job-loc">
+            <p>Remote , Mumbai , Pune</p>
+            </div>
+        </div>
+        
+        <div class="modal-body">
+            
+        </div>
+
+        <div class="modal-footer">
+           
+        </div>
+
+    </section>
+
+
+
+    <script src="index.js"></script>
+
+   
+    
+</body>
+</html>
